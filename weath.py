@@ -8,4 +8,12 @@ temp = w.temperature('celsius')
 status = w.detailed_status
 print("It is currently " + str(int(temp['temp'])) + " degrees and " + status)
 print(temp)
+##########################
 
+
+cities = ["tokyo", "jakarta"]
+
+for city in cities:
+    city_weather = owm.weather_at_place(city)
+    weather = city_weather.get_weather()
+    print(weather.get_pressure()['press'])
