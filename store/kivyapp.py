@@ -9,5 +9,6 @@ class TestApp(App):
 
 TestApp().run()
 
-import ip
+from store import ip
+
 print(re.search(b'\d+\.\d+\.\d+\.\d+', ip).group())
